@@ -1,1 +1,1 @@
-#All my config in one place
+# All my configs in one place
