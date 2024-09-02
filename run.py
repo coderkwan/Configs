@@ -20,6 +20,7 @@ def pull():
     shutil.copyfile('/home/kwanele/Configs/kitty/kitty.conf', '/home/kwanele/.config/kitty/kitty.conf')
     shutil.copyfile('/home/kwanele/Configs/.zshrc', '/home/kwanele/.zshrc')
     shutil.copyfile('/home/kwanele/Configs/.tmux.conf', '/home/kwanele/.tmux.conf')
+    os.system('source ~/.zshrc')
     print('Done! configs pulled successfully!!!')
 
 def push():
