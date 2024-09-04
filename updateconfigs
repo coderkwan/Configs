@@ -28,7 +28,7 @@ def push():
     shutil.copyfile( '/home/kwanele/.config/kitty/kitty.conf', '/home/kwanele/Configs/kitty/kitty.conf')
     shutil.copyfile( '/home/kwanele/.zshrc','/home/kwanele/Configs/.zshrc')
     shutil.copyfile( '/home/kwanele/.tmux.conf','/home/kwanele/Configs/.tmux.conf')
-    os.system('git add . && git commit -m "-update configs" && git push')
+    os.system('cd ~/Configs && git add . && git commit -m "-update configs" && git push')
     print('Done! configs pushed successfully!!!')
 
 main()

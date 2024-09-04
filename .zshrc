@@ -17,6 +17,7 @@ alias tks="tmux kill-session"
 
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$PATH:/home/kwanele/.dotnet/tools"
+export PATH="$PATH:/home/kwanele/Configs"
 
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
