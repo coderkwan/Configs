@@ -1,7 +1,7 @@
+#! /usr/bin/python
 import os
 import sys;
 import shutil;
-
 
 def main():
     if(len(sys.argv) > 1):
