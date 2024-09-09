@@ -12,7 +12,13 @@ exec --no-startup-id picom
 
 exec --no-startup-id parcellite
 
+exec --no-startup-id flameshot
+
 exec --no-startup-id feh --bg-scale ~/Pictures/nature.jpg
+
+# Increase brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
