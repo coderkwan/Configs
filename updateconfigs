@@ -16,19 +16,19 @@ def main():
 
 
 def pull():
-    shutil.copyfile('/home/kwanele/Configs/i3/config', '/home/kwanele/.config/i3/config')
-    shutil.copyfile('/home/kwanele/Configs/kitty/kitty.conf', '/home/kwanele/.config/kitty/kitty.conf')
-    shutil.copyfile('/home/kwanele/Configs/.zshrc', '/home/kwanele/.zshrc')
-    shutil.copyfile('/home/kwanele/Configs/.tmux.conf', '/home/kwanele/.tmux.conf')
+    shutil.copyfile('/home/kwanele/Art/Projects/Configs/sway/config', '/home/kwanele/.config/sway/config')
+    shutil.copyfile('/home/kwanele/Art/Projects/Configs/kitty/kitty.conf', '/home/kwanele/.config/kitty/kitty.conf')
+    shutil.copyfile('/home/kwanele/Art/Projects/Configs/.zshrc', '/home/kwanele/.zshrc')
+    shutil.copyfile('/home/kwanele/Art/Projects/Configs/.tmux.conf', '/home/kwanele/.tmux.conf')
     os.system('source ~/.zshrc')
     print('Done! configs pulled successfully!!!')
 
 def push():
-    shutil.copyfile('/home/kwanele/.config/i3/config','/home/kwanele/Configs/i3/config')
-    shutil.copyfile( '/home/kwanele/.config/kitty/kitty.conf', '/home/kwanele/Configs/kitty/kitty.conf')
-    shutil.copyfile( '/home/kwanele/.zshrc','/home/kwanele/Configs/.zshrc')
-    shutil.copyfile( '/home/kwanele/.tmux.conf','/home/kwanele/Configs/.tmux.conf')
-    os.system('cd ~/Configs && git add . && git commit -m "-update configs" && git push')
+    shutil.copyfile('/home/kwanele/.config/sway/config','/home/kwanele/Art/Projects/Configs/sway/config')
+    shutil.copyfile( '/home/kwanele/.config/kitty/kitty.conf', '/home/kwanele/Art/Projects/Configs/kitty/kitty.conf')
+    shutil.copyfile( '/home/kwanele/.zshrc','/home/kwanele/Art/Projects/Configs/.zshrc')
+    shutil.copyfile( '/home/kwanele/.tmux.conf','/home/kwanele/Art/Projects/Configs/.tmux.conf')
+    os.system('cd ~/Art/Projects/Configs && git add . && git commit -m "-update configs" && git push')
     print('Done! configs pushed successfully!!!')
 
 main()
