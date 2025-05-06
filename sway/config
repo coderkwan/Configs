@@ -22,7 +22,7 @@ bindsym $mod+v exec cliphist list | wmenu -l 7 | cliphist decode | wl-copy
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg ~/Pictures/wallpaper.jpg fill
 
 
 ### Key bindings
@@ -170,7 +170,7 @@ bindsym $mod+r mode "resize"
 bar {
     position bottom
 
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    status_command while source ~/.config/sway/statusbar.sh; do sleep 1; done
 
     colors {
         statusline #ffffff

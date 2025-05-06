@@ -17,6 +17,7 @@ def main():
 
 def pull():
     shutil.copyfile('/home/kwanele/Art/Projects/Configs/sway/config', '/home/kwanele/.config/sway/config')
+    shutil.copyfile('/home/kwanele/Art/Projects/Configs/sway/config', '/home/kwanele/.config/sway/statusbar.sh')
     shutil.copyfile('/home/kwanele/Art/Projects/Configs/kitty/kitty.conf', '/home/kwanele/.config/kitty/kitty.conf')
     shutil.copyfile('/home/kwanele/Art/Projects/Configs/.zshrc', '/home/kwanele/.zshrc')
     shutil.copyfile('/home/kwanele/Art/Projects/Configs/.tmux.conf', '/home/kwanele/.tmux.conf')
@@ -25,6 +26,7 @@ def pull():
 
 def push():
     shutil.copyfile('/home/kwanele/.config/sway/config','/home/kwanele/Art/Projects/Configs/sway/config')
+    shutil.copyfile('/home/kwanele/.config/sway/statusbar.sh','/home/kwanele/Art/Projects/Configs/sway/statusbar.sh')
     shutil.copyfile( '/home/kwanele/.config/kitty/kitty.conf', '/home/kwanele/Art/Projects/Configs/kitty/kitty.conf')
     shutil.copyfile( '/home/kwanele/.zshrc','/home/kwanele/Art/Projects/Configs/.zshrc')
     shutil.copyfile( '/home/kwanele/.tmux.conf','/home/kwanele/Art/Projects/Configs/.tmux.conf')
