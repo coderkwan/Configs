@@ -163,6 +163,8 @@ bindsym $mod+r mode "resize"
     # Special key to take a screenshot with grim
     bindsym Print exec grim -g "$(slurp)"
 
+gaps inner 10
+gaps outer 10
 #
 # Status Bar:
 #

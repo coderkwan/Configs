@@ -6,7 +6,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias h="cd ~"
 alias convim="cd ~/.config/nvim"
-alias work="cd ~/Art/Projects"
+alias work="cd ~/Art/Work"
 alias learn="cd ~/Art/Lessons"
 alias cr="clear"
 alias x="exit"
@@ -17,6 +17,12 @@ alias gip="git push"
 alias tks="tmux kill-session"
 alias tkp="tmux kill-pane"
 
+# fnm
+FNM_PATH="/home/kwanele/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/kwanele/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
 
 # pnpm
 export PNPM_HOME="/home/kwanele/.local/share/pnpm"
@@ -25,10 +31,3 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-# fnm
-FNM_PATH="/home/kwanele/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "`fnm env`"
-fi
