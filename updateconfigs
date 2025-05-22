@@ -1,4 +1,4 @@
-#! /usr/bin/python
+#! /usr/bin/python3
 import os
 import sys;
 import shutil;
@@ -17,18 +17,28 @@ def main():
 
 def pull():
     shutil.copyfile('/home/kwanele/Art/Work/Configs/sway/config', '/home/kwanele/.config/sway/config')
-    shutil.copyfile('/home/kwanele/Art/Work/Configs/sway/statusbar.sh', '/home/kwanele/.config/sway/statusbar.sh')
+
+    shutil.copyfile('/home/kwanele/Art/Work/Configs/waybar/config.jsonc', '/home/kwanele/.config/waybar/config.jsonc')
+    shutil.copyfile('/home/kwanele/Art/Work/Configs/waybar/style.css', '/home/kwanele/.config/waybar/style.css')
+
     shutil.copyfile('/home/kwanele/Art/Work/Configs/kitty/kitty.conf', '/home/kwanele/.config/kitty/kitty.conf')
+
     shutil.copyfile('/home/kwanele/Art/Work/Configs/.zshrc', '/home/kwanele/.zshrc')
+
     shutil.copyfile('/home/kwanele/Art/Work/Configs/.tmux.conf', '/home/kwanele/.tmux.conf')
     os.system('source ~/.zshrc')
     print('Done! configs pulled successfully!!!')
 
 def push():
     shutil.copyfile('/home/kwanele/.config/sway/config','/home/kwanele/Art/Work/Configs/sway/config')
-    shutil.copyfile('/home/kwanele/.config/sway/statusbar.sh','/home/kwanele/Art/Work/Configs/sway/statusbar.sh')
+
+    shutil.copyfile('/home/kwanele/.config/waybar/config.jsonc','/home/kwanele/Art/Work/Configs/waybar/config.jsonc')
+    shutil.copyfile('/home/kwanele/.config/waybar/style.css','/home/kwanele/Art/Work/Configs/waybar/style.css')
+
     shutil.copyfile( '/home/kwanele/.config/kitty/kitty.conf', '/home/kwanele/Art/Work/Configs/kitty/kitty.conf')
+
     shutil.copyfile( '/home/kwanele/.zshrc','/home/kwanele/Art/Work/Configs/.zshrc')
+
     shutil.copyfile( '/home/kwanele/.tmux.conf','/home/kwanele/Art/Work/Configs/.tmux.conf')
     os.system('cd ~/Art/Work/Configs && git add . && git commit -m "-update configs" && git push')
     print('Done! configs pushed successfully!!!')

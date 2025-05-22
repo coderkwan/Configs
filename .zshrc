@@ -1,13 +1,16 @@
 export ZSH="$HOME/.oh-my-zsh"
+
 ZSH_THEME="robbyrussell"
+
 plugins=(git)
+
 source $ZSH/oh-my-zsh.sh
 
 
 alias h="cd ~"
 alias convim="cd ~/.config/nvim"
 alias work="cd ~/Art/Work"
-alias learn="cd ~/Art/Lessons"
+alias play="cd ~/Art/Play"
 alias cr="clear"
 alias x="exit"
 alias gis="git status"
@@ -16,6 +19,8 @@ alias gic="git commit -m "
 alias gip="git push"
 alias tks="tmux kill-session"
 alias tkp="tmux kill-pane"
+
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 # fnm
 FNM_PATH="/home/kwanele/.local/share/fnm"
