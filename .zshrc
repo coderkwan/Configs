@@ -6,7 +6,6 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-
 alias h="cd ~"
 alias convim="cd ~/.config/nvim"
 alias work="cd ~/Art/Work"
@@ -20,9 +19,7 @@ alias gip="git push"
 alias tks="tmux kill-session"
 alias tkp="tmux kill-pane"
 
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
-# fnm
 FNM_PATH="/home/kwanele/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
   export PATH="/home/kwanele/.local/share/fnm:$PATH"

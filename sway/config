@@ -1,12 +1,42 @@
+# git
+# github-cli
+# tmux
+# go
+# python
+# fnm
+# pnpm
+# zsh
+# ohmyzsh
+# kitty
+# neovim
+# firefox
+# grim
+
+# slurp
+# brightnessctl
+# cliphist
+# wl-clipboard
+# rofi
+# thunar
+# tumbler
+
+# swaybg
+# swaylock
+# swayidle
+# waybar
+
+
+
 input "type:touchpad" {
     dwt enabled
     tap enabled
     tap_button_map lrm
+    accel_profile "adaptive"
+    drag enabled     
+    drag_lock disabled
 }
 default_border none
 
-### Variables
-#
 set $mod Mod4
 set $left h
 set $down j
@@ -18,19 +48,19 @@ set $browser firefox
 set $files thunar
 
 exec waybar
-exec wl-paste -t text --watch clipman store
-bindsym $mod+v exec clipman pick -t rofi 
+exec wl-paste --watch cliphist store
+bindsym $mod+v exec cliphist list | rofi -dmenu | cliphist decode | wl-copy
+bindsym Print exec grim -g "$(slurp)" ~/Pictures/shot-$(date +%F_%T).png
 
-### Output configuration
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Pictures/wallpaper.jpg fill
+exec swayidle -w \
+  timeout 300 'swaylock -f -c 000000' \
+  timeout 360 'swaymsg "output * dpms off"' \
+  resume 'swaymsg "output * dpms on"' \
+  before-sleep 'swaylock -f -c 000000'
 
 
-### Key bindings
-#
-# Basics:
-#
+output * bg ~/Pictures/wallpaper.png fill
+
     bindsym $mod+Return exec $term
     bindsym $mod+q kill
     bindsym $mod+w exec $browser
@@ -154,8 +184,6 @@ bindsym $mod+r mode "resize"
     # Special keys to adjust brightness via brightnessctl
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
-    # Special key to take a screenshot with grim
-    bindsym Print exec grim -g "$(slurp)"
 
 gaps inner 10
 gaps outer 10
