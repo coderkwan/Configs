@@ -7,7 +7,7 @@
 # pnpm
 # zsh
 # ohmyzsh
-# kitty
+# alacritty
 # neovim
 # firefox
 # grim
@@ -42,7 +42,7 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $term kitty
+set $term alacritty
 set $menu rofi
 set $browser firefox
 set $files thunar
